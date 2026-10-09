@@ -648,3 +648,254 @@ model-viewer[alt="3D Statue Head"] {
 #footer-form button:hover {
     background-color: #cc3700;
 }
+
+/* =======================================================
+   RESPONSIVE FIXES FOR TABLET & MOBILE (375px - 768px)
+======================================================= */
+
+@media (max-width: 1440px) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 60px;
+    }
+
+    .hero-nav {
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    /* Text sizes ko mobile ke hisaab se chota karna */
+    .text-bold-design,
+    .text-performs {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none !important;
+        font-size: clamp(3rem, 10vw, 5rem);
+        white-space: normal;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .text-that {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin: 10px 0;
+    }
+
+    /* 3D Statue ko responsive banana */
+    model-viewer[alt="3D Statue Head"] {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 320px;
+        height: 380px;
+        margin: 20px auto;
+    }
+
+    /* Floating badges ko mobile par hide ya stack karna */
+    .badge-strategy,
+    .side-identity,
+    .badge-comfortable {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .brand-trust-bar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+        transform: none;
+        left: 0;
+    }
+
+    .brand-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1rem;
+    }
+}
+/* =======================================================
+   RESPONSIVE FIXES FOR SERVICES SECTION (Tablet & Mobile)
+======================================================= */
+@media (max-width: 1440px) {
+    .services-section {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    #dynamic-services-container {
+        flex-direction: column;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: visible;
+        scroll-snap-type: none;
+    }
+
+    .service-block {
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        scroll-snap-align: none;
+    }
+
+    .services-header-wrapper {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-heading {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        white-space: normal;
+        line-height: 1.1;
+    }
+
+    .services-two-column {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        gap: 30px;
+        margin: 20px auto 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-col, .strategy-layout-grid {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        flex: none;
+    }
+
+    .strategy-master-img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .right-col {
+        align-items: center;
+    }
+
+    .desc-text {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .service-list-figma {
+        text-align: left;
+        display: inline-block;
+    }
+}
+/* =======================================================
+   RESPONSIVE FIXES FOR FOOTER SECTION (Tablet & Mobile)
+======================================================= */
+@media (max-width: 1440px) {
+    .upthrust-dark-footer {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .footer-master-frame {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+    }
+
+    .footer-giant-text-row {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .giant-word {
+        font-size: clamp(3rem, 12vw, 6rem);
+        transform: none; /* Scale hata kar normal karne ke liye */
+        white-space: normal;
+    }
+
+    .footer-divider {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .footer-bottom-section {
+        position: relative;
+        top: auto;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .footer-col-left {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px 0;
+        gap: 30px;
+    }
+
+    .footer-links-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col-right {
+        width: 100%;
+        height: auto;
+        padding: 30px 0 20px 0;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
