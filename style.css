@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* =======================================================
+   1. BASE SETUP & VARIABLES
+======================================================= */
+:root {
+    --primary-orange: #FF4200;
+    --bg-dark: #050505;
+    --text-light: #ffffff;
+}
+
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
+}
+
+body {
+    background-color:#f5f5f5; 
+    margin: 0;
+    overflow-x: auto; 
+}
+
+
+/* Master Hero Container */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 1297px;
+    background-color: #ffffff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    overflow: hidden;
+}
+
+/* --- NAVBAR --- */
+.hero-nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 72px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 10;
+    
+    box-sizing: border-box;
+}
+.contact-us-link { color: #FF4200; text-decoration: none; font-weight: 900; }
+
+/* --- MAIN CONTENT (1440 x 1079 Box) --- */
+.hero-content {
+    position: absolute;
+    top: 72px; /* Nav ke theek neeche se shuru */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 1079px;
+    pointer-events: none; /* Background par click block */
+}
+
+/* 1. BOLD DESIGN (Slanted & Wide) */
+.text-bold-design {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    /* Slant (-8deg) aur stretch (1.3) exact image jaisa look dega */
+    transform: translateX(-50%) scaleX(1.3) skewX(-8deg); 
+    font-style: italic;
+    font-size: 150px;
+    font-weight: 800;
+    color: #FF4200;
+    white-space: nowrap;
+    z-index: 1; /* Statue ke piche */
+    margin: 0;
+    letter-spacing: -4px;
+}
+
+/* 2. STATUE */
+model-viewer[alt="3D Statue Head"] {
+    position: absolute;
+    top: 150px;
+    left: 447px;
+    width: 546px;
+    height: 685px;
+    z-index: 2; /* Beech mein */
+    pointer-events: auto;
+}
+
+/* 3. THAT (Normal straight bold) */
+.text-that {
+    position: absolute;
+    top: 420px;
+    left: 770px; /* Statue ke right side par */
+    font-size: 130px;
+    font-weight: 900;
+    color: #FF4200;
+    z-index: 3; /* Statue ke aage */
+    margin: 0;
+    line-height: 1;
+}
+
+/* 4. PERFORMS (Slanted & Wide like Top text) */
+.text-performs {
+    position: absolute;
+    top: 730px; /* Statue ke base par overlap */
+    left: 50%;
+    transform: translateX(-50%) scaleX(1.3) skewX(-8deg);
+    font-style: italic;
+    font-size: 150px;
+    font-weight: 800;
+    color: #FF4200;
+    white-space: nowrap;
+    z-index: 3; /* Statue ke aage */
+    margin: 0;
+    letter-spacing: -4px;
+}
+
+/* --- SIDE TEXTS & SKETCH MARKS --- */
+.badge-strategy {
+    position: absolute;
+    top: 360px;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.4;
+    z-index: 5;
+    text-align: left;
+}
+
+/* Circle marker CSS hack */
+.circle-mark {
+    display: inline-block;
+    position: relative;
+    padding: 0 5px;
+}
+.circle-mark::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    width: 110%; height: 130%;
+    border: 2px solid #FF4200;
+    border-radius: 50%;
+}
+
+.side-identity {
+    position: absolute;
+    top: 500px;
+    left: 80px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.5;
+    z-index: 5;
+}
+.underline-mark {
+    text-decoration: underline;
+    text-decoration-color: #FF4200;
+    text-decoration-thickness: 3px;
+}
+
+.badge-comfortable {
+    position: absolute;
+    top: 320px;
+    right: 150px;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.2;
+    z-index: 5;
+}
+.underline-mark-long {
+    width: 100%;
+    height: 4px;
+    background-color: #FF4200;
+    margin-top: 5px;
+    border-radius: 2px;
+    transform: rotate(-1deg);
+}
+
+/* --- BRAND TRUST BAR --- */
+.brand-trust-bar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 144px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 72px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    z-index: 10;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Transparent ki jagah white taaki lines overlap na karein */
+}
+.brand-left { display: flex; align-items: center; gap: 15px; }
+.brand-count { font-size: 3rem; font-weight: 900; line-height: 1; }
+.brand-logos { display: flex; gap: 50px; font-weight: 900; font-size: 1.3rem; }
+
+/* =======================================================
+   3. SERVICES SECTION (HORIZONTAL SCROLL)
+======================================================= */
+.services-section {
+    position: relative;
+    background-color: #000000;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.pipe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#pipe-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 4320px; 
+    height: 1400px;
+    transform: translateY(-50%);
+    opacity: 1;
+    max-width: none; 
+    will-change: transform;
+}
+
+#dynamic-services-container {
+    position: relative;
+    z-index: 10;
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    scroll-snap-type: x mandatory; 
+}
+
+#dynamic-services-container::-webkit-scrollbar {
+    display: none;
+}
+
+.service-block {
+    flex: 0 0 100vw; 
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.service-content-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    color: white;
+}
+
+.services-header-wrapper {
+    width: 1440px;
+    height: 112px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.sub-heading {
+    font-size: 0.75rem; 
+    letter-spacing: 3px;
+    opacity: 0.6;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px; 
+    color: white;
+}
+
+.main-heading {
+    font-weight: 600; 
+    font-size: 96px; 
+    line-height: 104%; 
+    letter-spacing: -0.06em; 
+    color: #FFFFFF; 
+    margin: 0;
+    white-space: nowrap; 
+}
+
+.services-two-column {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 1440px; 
+    height: 332px; 
+    padding-left: 120px; 
+    padding-right: 40px; 
+    gap: 160px; 
+    margin: 70px auto 0 auto; 
+}
+
+.left-col {
+    width: 492px;
+    height: 332px;
+    flex: 0 0 492px; 
+    display: flex;
+    align-items: center;
+}
+
+.strategy-layout-grid {
+    width: 492px;
+    height: 332px;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.strategy-master-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.right-col {
+    flex: 1;
+    padding: 10px 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desc-text {
+    font-size: 20px; 
+    font-weight: 500; 
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: #FFFFFF; 
+    max-width: 450px; 
+}
+
+.service-list-figma {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.service-list-figma li {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.service-list-figma li::before {
+    content: "✦"; 
+    color: #FFFFFF; 
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.contact-btn {
+    background: white;
+    color: var(--primary-orange);
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.contact-btn:hover {
+    background: var(--primary-orange);
+    color: white;
+}
+
+/* =======================================================
+   4. CONTACT FORM & FOOTER
+======================================================= */
+.contact-section {
+    position: relative; 
+    z-index: 20; 
+    background-color: var(--bg-dark);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#upthrust-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column; 
+}
+
+@media (min-width: 768px) {
+    #upthrust-form {
+        flex-direction: row; 
+    }
+}
+
+#upthrust-form input {
+    flex: 1;
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#upthrust-form input:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+}
+
+#upthrust-form button {
+    padding: 15px 30px;
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#upthrust-form button:hover {
+    background-color: #cc3700;
+}
+
+.main-footer {
+    position: relative; 
+    z-index: 20; 
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 50px 20px 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-footer h2 {
+    font-size: clamp(2rem, 6vw, 6rem); 
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+/* =======================================================
+   NEW FOOTER CONTAINER (Strict 1440x900)
+======================================================= */
+.upthrust-dark-footer {
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center; /* Frame ko badi screen pe bhi center rakhega */
+    overflow: hidden;
+}
+
+.footer-master-frame {
+    position: relative; /* Ab iske andar sab absolute position pe set hoga */
+    width: 1440px;
+    height: 900px;
+    background-color: #000000;
+    padding-top: 120px; /* Teri Figma wali exact padding */
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+/* --- 1. GIANT TEXT ROW --- */
+  .footer-giant-text-row {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 54px;
+    margin-bottom: 35px; /* Yeh line text aur divider ke beech gap de degi */
+    box-sizing: border-box;
+}
+
+
+.giant-word {
+    font-size: 120px; /* Size kam kiya taaki container se bahar na bhage */
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 0.8;
+    letter-spacing: -2px; /* Letters ko thoda paas laane ke liye */
+    
+    /* scaleY(1.6) text ko lamba karega, aur scaleX(0.85) thoda sikud (compress) dega */
+    transform: scaleY(1.6) scaleX(0.85); 
+    white-space: nowrap; /* Taaki text toot kar agli line mein na jaye */
+}
+
+.footer-logo-mark {
+    height: 80px; /* Logo ki height, apne hisaab se adjust kar lena */
+    width: auto;
+    margin-bottom: 10px; /* Logo ko text ke barabar set karne ke liye */
+}
+
+
+/* --- DIVIDER LINE --- */
+.footer-divider {
+    width: 1440px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+}
+
+/* --- 2. BOTTOM SECTION LAYOUT --- */
+.footer-bottom-section {
+    position: absolute;
+    top: 313px; /* Divider line ke theek neeche se shuru */
+    left: 0;
+    width: 1440px;
+    height: 587px; /* 900px total - 313px top = 587px bacha hua */
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* Left & Right Columns Layout */
+.footer-col-left {
+    width: 885px; /* Left hissa thoda chouda */
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Centre wali vertical line */
+    padding: 60px 0 40px 40px; /* Top, Right, Bottom, Left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Upar ka content upar, neeche ka lorem text ekdum bottom mein lock karega */
+}
+
+.footer-col-right {
+    width: 555px; /* Right hissa thoda chota */
+    height: 100%;
+    padding: 60px 40px 40px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Left Content Styles */
+.footer-links-wrapper { display: flex; gap: 120px; }
+.agency-link { color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; display: inline-block; margin-bottom: 20px;}
+.agency-desc { font-size: 13px; color: #fff; margin-bottom: 6px; }
+.agency-email { font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+.footer-lorem { font-size: 13px; color: rgba(255, 255, 255, 0.5); margin: 0; }
+
+/* Right Content Styles */
+.form-title { font-size: 16px; font-weight: 500; margin: 0 0 20px 0; color: #fff; }
+.check-label { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; margin-bottom: 40px; cursor: pointer; }
+.check-label input { margin-top: 4px; cursor: pointer;}
+
+.footer-form { display: flex; flex-direction: column; margin-bottom: auto; /* margin-bottom auto form ke neeche ki cheezon ko end mein push karega */ }
+.footer-form input { background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.3); color: #fff; padding: 10px 0; margin-bottom: 15px; font-size: 14px; outline: none; }
+.footer-form input::placeholder { color: rgba(255,255,255,0.3); }
+.footer-form button { background: transparent; border: none; color: #fff; text-align: left; font-size: 14px; font-weight: bold; cursor: pointer; padding: 0; }
+
+.footer-bottom-links { display: flex; gap: 60px; margin-bottom: 60px; }
+.social-text { font-size: 14px; color: #fff; margin: 0 0 10px 0; }
+.footer-copyright { display: flex; gap: 30px; font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+.footer-copyright p { margin: 0; }
+
+/* footer submit form*/
+#footer-form {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column; 
+}
+
+@media (min-width: 768px) {
+    #footer-form {
+        flex-direction: row; 
+        align-items: center; /* Yeh input aur button ko ekdum vertical center mein le aayega! */
+    }
+}
+
+#footer-form input {
+    flex: 1;
+    height: 48px;
+    padding: 0 16px;
+    margin: 0; /* Extra margin hatane ke liye */
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#footer-form input:focus {
+    outline: none;
+    border-color: #FF4200;
+}
+
+#footer-form button {
+    height: 48px;
+    padding: 0 24px;
+    margin: 0; /* Extra margin hatane ke liye */
+    background-color: #FF4200;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+#footer-form button:hover {
+    background-color: #cc3700;
+}

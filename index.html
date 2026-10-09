@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Technical SEO & Meta Tags (Pehle wale se) -->
+    <!-- Technical SEO & Meta Tags -->
     <title>Upthrust | Bold Design That Performs</title>
     <meta name="description" content="Upthrust design landing page featuring 3D elements and functional forms.">
     <link rel="canonical" href="https://your-deployment-link.com" />
 
-    <!-- Open Graph for Social Sharing (Pehle wale se) -->
+    <!-- Open Graph for Social Sharing -->
     <meta property="og:title" content="Upthrust | Landing Page">
     <meta property="og:description" content="Bold Design That Performs">
     <meta property="og:image" content="link-to-your-og-image.jpg">
@@ -18,68 +18,153 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 🌟 YEH HAI WO MAGIC SCRIPT JO BINA REACT KE 3D RENDER KAREGI (Dusre wale se) 🌟 -->
+    <!-- MAGIC SCRIPT FOR 3D RENDER -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
 
     <!-- Header for Navbar -->
     <header>
-        <!-- Navbar yahan aayega agar Figma me hai -->
+        <!-- Navbar -->
     </header>
 
     <main>
-        <!-- 1. Hero Section -->
-        <section class="hero-section" id="hero">
-            <div class="hero-content">
-                <!-- ONLY ONE H1 allowed for SEO -->
-                <h1 class="main-title">BOLD DESIGN <br> THAT <br> PERFORMS</h1>
-                
-                <!-- Asali 3D Statue yahan dikhegi -->
-                <model-viewer 
-                    src="assets/Updated statue.glb" 
-                    alt="3D Statue Head" 
-                    auto-rotate 
-                    camera-controls 
-                    disable-zoom 
-                    style="width: 100%; height: 400px;">
-                </model-viewer>
-            </div>
-        </section>
+     <section class="hero-section">
+    <!-- Top Navbar -->
+    <nav class="hero-nav">
+        <div class="logo" style="font-size: 1.5rem; font-weight: 900;"> Upthrust</div>
+        <a href="#" class="contact-us-link">CONTACT US</a>
+    </nav>
+
+    <!-- Main Content Box -->
+    <div class="hero-content">
+        
+        <!-- 1. Background Text -->
+        <h1 class="text-bold-design">BOLD DESIGN</h1>
+
+        <!-- 2. The 3D Statue -->
+        <model-viewer src="assets/Updated statue.glb" alt="3D Statue Head" auto-rotate camera-controls disable-zoom></model-viewer>
+
+        <!-- 3. Foreground Texts -->
+        <h1 class="text-that">THAT</h1>
+        <h1 class="text-performs">PERFORMS</h1>
+
+        <!-- 4. Floating Badges & Side Text -->
+        <div class="badge-strategy">
+            STRATEGY IS<br>
+            <span class="circle-mark">CHEAPER</span>
+        </div>
+        
+        <div class="side-identity">
+            IDENTITY •<br>EXPERIENCE •<br>
+            <span class="underline-mark">MOTION •</span>
+        </div>
+        
+        <div class="badge-comfortable">
+            COMFORTABLE<br>IS EXPENSIVE
+            <div class="underline-mark-long"></div>
+        </div>
+    </div>
+
+    <!-- Bottom Brand Bar -->
+    <div class="brand-trust-bar">
+        <div class="brand-left">
+            <span class="brand-count">100+</span>
+            <span style="font-size: 0.8rem; line-height: 1.2;">Brands trusted us to<br>define how they're seen.</span>
+        </div>
+        <div class="brand-logos">
+            <span>zomato</span>
+            <span>BOSCH</span>
+            <span>L'ORÉAL</span>
+            <span>VEGA</span>
+            <span>DELL</span>
+            <span>L'ORÉAL</span>
+        </div>
+    </div>
+</section>
 
         <!-- 2. Services Section -->
         <section class="services-section">
-            <!-- 3D Ghoomti hui pipe yahan dikhegi -->
-            <model-viewer 
-                src="assets/curve line with dark orange.glb" 
-                alt="3D Orange Pipe" 
-                auto-rotate 
-                disable-zoom 
-                style="width: 100%; height: 200px;">
-            </model-viewer>
-            
-            <div class="services-container">
-                <div class="service-card">
-                    <h2>Strategy and insight</h2>
-                </div>
-                <div class="service-card">
-                    <h2>Brand & visual identity</h2>
-                </div>
+            <div class="pipe-container">
+                <img id="pipe-image" src="assets/orange_pipe.png" alt="Orange Pipe Background">
+            </div>
+            <div id="dynamic-services-container">
+                <!-- Data loading via JS -->
             </div>
         </section>
 
         <!-- 3. Form Section -->
         <section class="contact-section">
             <form id="upthrust-form">
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required>
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
 
     <!-- 4. Footer -->
-    <footer class="main-footer">
-        <h2>UPTHRUST DESIGN</h2>
+    <footer class="upthrust-dark-footer">
+        <div class="footer-master-frame">
+            
+            <!-- 1. GIANT TEXT ROW -->
+            <div class="footer-giant-text-row">
+                <h1 class="giant-word">UPTHRUST</h1>
+                <h1 class="giant-word">DESIGN</h1>
+            </div>
+
+            <!-- Divider Line -->
+            <div class="footer-divider"></div>
+
+            <!-- 2. BOTTOM LAYOUT -->
+            <div class="footer-bottom-section">
+                
+                <!-- Left Column -->
+                <div class="footer-col-left">
+                    <div class="footer-links-wrapper">
+                        <div class="link-item">
+                            <a href="#" class="agency-link">upthrust.agency ↗</a>
+                            <p class="agency-desc">add description here</p>
+                            <p class="agency-email">hello@upthrust.agency</p>
+                        </div>
+                        <div class="link-item">
+                            <a href="#" class="agency-link">upthrust.io ↗</a>
+                            <p class="agency-desc">add description here</p>
+                            <p class="agency-email">hello@upthrust.io</p>
+                        </div>
+                    </div>
+                    <p class="footer-lorem">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+
+                <!-- Right Column -->
+                <div class="footer-col-right">
+                    <h4 class="form-title">Sign up for our emails</h4>
+                    <label class="check-label">
+                        <input type="checkbox">
+                        <span>By checking this box sign up for our newsletter and receive marketing emails and updates on our services. You can unsubscribe at any time.</span>
+                    </label>
+
+                    <!-- Footer Form with unique email ID to prevent JS conflict -->
+                    <form id="footer-form" class="footer-form">
+                        <input type="email" id="footer-email" placeholder="typehere@youremail.com" autocomplete="email" required>
+                        <button type="submit">Submit</button>
+                    </form>
+
+                    <div class="footer-bottom-links">
+                        <a href="#" class="agency-link">upthrust.agency ↗</a>
+                        <a href="#" class="agency-link">upthrust.io ↗</a>
+                    </div>
+                    
+                    <div class="footer-socials">
+                        <p class="social-text">Instagram, LinkedIn</p>
+                        <div class="footer-copyright">
+                            <p>Privacy Policy</p>
+                            <p>© Upthrust Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </footer>
 
     <!-- JavaScript Link -->
